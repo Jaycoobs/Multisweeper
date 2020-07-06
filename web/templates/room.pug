@@ -1,0 +1,36 @@
+doctype html
+html
+	head
+		title MULTISWEEPER
+		link(rel="stylesheet" href="/css/style.css")
+
+	body
+		div.panel.sidebar
+			h2 MULTISWEEPER
+			p#deathMessage(style="color: red;")
+			br
+			p.floatLeft TIME
+			p.floatRight#time 000
+			br
+			br
+			p.floatLeft MINES
+			p.floatRight#mines 000
+			br
+			br
+			ul.list#userList
+				li.header USERS
+			div.button(style="position: absolute; bottom: 20px;")#reset
+				p RESET
+
+		div.content
+			p#boomText(style="display: none; position: absolute; top: 50%; left: 50%;") BOOM
+			canvas#game
+
+	script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js")
+	script(src="/js/client/lib/gl-matrix-min.js")
+	script(src="/js/client/Shader.js")
+	script(src="/js/client/Texture.js")
+	script(src="/js/client/VAO.js")
+	script(src="/js/client/Board.js")
+	script(src="/js/client/MultisweeperClient.js")
+	script client.createBoard(!{board.width}, !{board.height});

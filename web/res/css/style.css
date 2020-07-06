@@ -1,0 +1,104 @@
+body {
+	font-family: monospace;
+	color: #444;
+	background-color: #EEE;
+}
+
+p { margin: 0px; }
+
+h2 { margin: 0px; }
+
+canvas {
+	width: 100%;
+	height: 100%;
+}
+
+.title { text-align: center; }
+
+.center {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.floatRight { float: right; }
+
+.floatLeft { float: left; }
+
+.panel {
+	background-color: #777;
+	color: #EEE;
+	padding: 20px;
+	margin: 0px;
+}
+
+.panel input {
+	margin-top: 8px;
+	margin-bottom: 8px;
+}
+
+.sidebar {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	bottom: 0px;
+	width: 200px;
+}
+
+.sidebar h2 { margin-bottom: 20px; }
+
+.button {
+	display: inline-block;
+	background-color: #444;
+	color: #EEE;
+	padding: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	cursor: pointer;
+}
+
+.list {
+	width: 95%;
+	margin: auto;
+	border-collapse: collapse;
+	padding: 0px;
+	list-style: none;
+}
+
+.list li {
+	border-bottom: 1px solid #EEE;
+	padding: 8px;
+	margin: 0px;
+}
+
+.list li.header { border-bottom: 3px solid #EEE; }
+
+.content {
+	margin: 0px;
+	position: absolute;
+	left: 240px;
+	right: 0px;
+	top: 0px;
+	bottom: 0px;
+}
+
+@keyframes fallOut {
+	from {transform: translate(0px, 0px)}
+	to {transform: translate(0px, 10000px);}
+}
+
+@keyframes fallIn {
+	from {transform: translate(0px, -10000px);}
+	to {transform: translate(0px, 0px)}
+}
+
+.fallOut {
+	animation-name: fallOut;
+	animation-duration: 1s;
+}
+
+.fallIn {
+	animation-name: fallIn;
+	animation-duration: 1s;
+}
