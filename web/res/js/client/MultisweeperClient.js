@@ -250,35 +250,6 @@ class MultisweeperClient {
 
 }
 
-class Ping {
-
-	constructor(x, y) {
-
-	}
-
-	render() {
-		if (!Ping.pingRenderer) {
-			Ping.pingRenderer = new LineModel();
-			let a = 0;
-			let da = 0.1256;
-			for (; a < 6.28; a += 0.1256) {
-				let x1 = Math.cos(a);
-				let y1 = Math.sin(a);
-				let x2 = Math.cos(a+da);
-				let y2 = Math.sin(a+da);
-				Ping.pingRenderer.addLine(x1, y1, x2, y2, 1, 1, 1);
-			}
-			let x1 = Math.cos(a);
-			let y1 = Math.sin(a);
-			let x2 = Math.cos(0);
-			let y2 = Math.sin(0);
-			Ping.pingRenderer.addLine(x1, y1, x2, y2, 1, 1, 1);
-		}
-		Ping.pingRenderer.draw();
-	}
-
-}
-
 const client = new MultisweeperClient();
 client.init();
 client.start();
